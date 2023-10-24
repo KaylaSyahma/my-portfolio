@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'DM Sans', sans-serif;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+:root {
+    --background-color: #171717; /*ini buat section 1*/
+    --second-bg-color: #212121;
+    --third-bg-color: #27AE60; /*inni buat button*/
+    --text-color: #7E7474; /*ini  buat text yang gelap*/
+    --second-text-color: #F5EDED;/*ini buat text yg terang*/
+}
+section {
+    padding: 10rem 9% 2rem;
+    min-height: 100vh;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--second-text-color);
+}
+
+.header {
+    /* position: fixed; fixed artinya ga bergerak */
+    top: 0;
+    left: 0;
+    width: 100%; /*agar lebar memenuhi viewport*/
+    padding: 2rem 9%; /*2 rem itu jarak si tulisan portfolio ke atas page, 9% diambil dri seluruh kelebaran viewport yg 100%*/
+    background: var(--background-color);
+    display: flex; /*flex biar semuanya sebaris*/
+    justify-content: space-between; /*ngasih space karena portfolio dn home dll beda tag*/
+    align-items: center;
+    /* z-index: 100; z-index itu kayak buat layer, semakin gede angkanya, dia bakal makin ke depan. misalkan ada z index:1 sm z-index:3, z-index:1 nya bakal ketiban sm z-index:3 */
+}
+.logo {
+    font-size: 2.5rem;
+    color: var(--second-text-color);
+    font-weight: 600;
+    cursor: default; /*klo pointer, dia bakal bentuk tangan pas kursornya dikenain*/
+}
+
+.navbar a {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+}
+/*hover kalau dipencet*/
+.navbar a:hover {
+    color: var(--third-bg-color);
+    transition: .4s ease;
+}
+
+.home {
+    display: flex; /*jadi satu baris */
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+    background: var(--background-color);
+    /* background: linear-gradient(to right, var(--background-color), #043618); */
+}
+
+.home-img img {
+    width: 35vw; /*vw = viewport weight*/
+    /* border-radius: 50%; */
+}
+
+.home-content h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+.home-content h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+.btn {
+    margin-top: 35px;
+}
+.btn1{
+    display: inline-block;
+    padding: 12px 34px;
+    background: var(--background-color);
+    border: .5px solid var(--second-text-color);
+    border-radius: 4px;
+    font-size: 16px;
+    color: var(--second-text-color);
+    font-weight: 500;
+    margin-right: 15px;
+    transition: .6s ease;
+}
+
+.btn1:hover {
+    /* background: var(--third-bg-color); */
+    border: none;
+    box-shadow: inset 11em 0 0 0 var(--third-bg-color)
+    
+}
+
+.about {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* margin: 38px 400px; */
+}
+
+.heading {
+    color: #FFF;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 7rem;
+}
+
+.about p {
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 40px 150px;
+}
+
+.boxicon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    background: transparent;
+    border: .2rem solid var(--text-color); /*0.2 = .2*/
+    border-radius: 50%;
+    font-size: 3rem;
+    color: var(--second-text-color);
+    margin: 3rem 100px 3rem;  /*atas kanan bawah kiri*/
+    transition: .5s ease; /*ease = pelan cepet pelan transisinya, ease in cahaya dri dlm, ease out cahayanya dri luar*/  
+
+}
+
+.boxicon a:hover {
+    background: var(--third-bg-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 4rem var(--third-bg-color); /*biar bercahaya*/
+    border: none;
+}
+
+.service-container {
+    display: flex;
+    gap: 60px;
+    margin-top: 100px;
+}
+
+.service-container .service-box {
+    flex: 1 1 30rem; /**/
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem; /*atas-kanan/kiri-bawah*/
+    border-radius: 1rem;
+    text-align: left;
+    border: .2rem solid var(--second-bg-color);
+    transition: .7s ease;  
+}    
+.service-container .service-box:hover {
+   border-color: #27AE60;
+   transform: scale(1.09);
+}
+.service-box h2 {
+    text-align: left;
+    color: var(--text-color);
+    margin-top: 30px;
+    transition: 1s ease;
+    font-size: 40px;
+    font-weight: 700;
+}
+.service-box h2:hover {
+    color: var(--second-text-color);
+    text-shadow: 0 0 .4rem var(--third-bg-color);
+}
+.my-skills {
+    background: var(--second-bg-color);
+    display: flex;
+    justify-content: center;
+    margin: 75px;
+}
+.persentasi-skill {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.my-skills .persentasi-skill h2 {
+    color: var(--text-color);
+    margin: 59px 80px;
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.my-skills .persentasi-skill h3 {
+    color: var(--green-2, #27AE60);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: -50px;
+    margin-bottom: 57px;
+}
+
+.Portfolio-container {
+    display: grid; /*grid buat bikin kolom nya*/
+    grid-template-columns: repeat(3, 1fr); /*1fr jarak antara 1 kolom dengan kolom yg lainnya*/
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.Portfolio-container .Portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.Portfolio-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.Portfolio-box img:hover{
+    transform: scale(1.1);
+    
+}
+
+
+
+.Portfolio-box .Portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0,0,0,0.1), var(--third-bg-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*dia bikin tag yg berbeda jadi kepisah*/
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.Portfolio-box:hover .Portfolio-layer {
+    transform: translateY(0);
+}
+
+.Portfolio-box .Portfolio-layer h4 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.Portfolio-box .Portfolio-layer p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.Portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--second-bg-color);
+    border-radius: 50%;
+}
+
+.Portfolio-layer i {
+    font-size: 2rem;
+    color: var(--third-bg-color);
+}
+
+
+.contact h2 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+span {
+    color: var(--third-bg-color);
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto; /*1rem atas bawah, auto kanan kiri*/
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box  input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 0.8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+} 
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn1 {
+    margin-top: 2rem;
+    /* cursor: pointer;
+    background: #27AE60;
+    border: none; */
+    transition: .30s ease;
+}
+.contact form .btn1:hover {
+    /* box-shadow: 0 0 2rem var(--third-bg-color); */
+    box-shadow: inset 0 -3.25em 0 0 var(--third-bg-color);
+    transform: translateY(-0.25em);
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+footer p {
+    color: var(--text-color);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
